@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div>
+    <h1>
+        this is content from template using django
+    </h1>
+    <h2>this site was made by {{myname}}</h2>
+    {% for list_item in listnum %}
+        {% include 'aboutus/test.html' with value=list_item %}
+    {% endfor %}
+    {% for q in question %}
+        {% include 'aboutus/test.html' with value=q %}
+    {% endfor %}
+</div>
+
+{% endblock content %}
